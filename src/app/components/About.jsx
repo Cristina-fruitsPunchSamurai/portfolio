@@ -8,8 +8,8 @@ export default function About() {
                 After 7 years working on digital marketing for innovative companies, I decided to change my career path and become a web developer 💪🏼
                 <span className='font-bold'> ... But why?... </span>Because I want to always have something to learn, plus I really like solving problems and bring projects to life. <br/><br/>
                 Currently, my tech stack is based on JavaScript but I started learning Java and I open to learning new programming languages.
-                Also, I'm a big fan of React and I'm currently learning Next.js and TypeScript. 🤓 <br/><br/>
-                Something random about me, I'm fluent in French, Spanish, English and I'm a Japanese intermediate. I'm fascinated by Japanese Edo period, mangas, animes and Japanese culture.
+                Also, I&apos;m a big fan of React and I&apos;m currently learning Next.js and TypeScript. 🤓 <br/><br/>
+                Something random about me, I&apos;m fluent in French, Spanish, English and I&apos;m a Japanese intermediate. I&apos;m fascinated by Japanese Edo period, mangas, animes and Japanese culture.
             </p>
         </section>
     )
