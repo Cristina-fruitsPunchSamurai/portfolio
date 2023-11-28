@@ -34,10 +34,10 @@ export default function Hero() {
                     </h2>
                     </div>
                     <p className="text-[#ADB7BE] text-sm mb-6 lg:text-md w-full text-justify md:mt-8">
-                        Hello I'm Cristina, a fulllstack JavaScript developer.
+                        Hello I&apos;m Cristina, a fulllstack JavaScript developer.
                         My goal is to continue learning more frameworks and langugages to become a better developer.
-                        I'm attracted to front-end libraries like React but I also enjoy working with Node.js.
-                        I'm currently looking for a apprenticeship in a company where I can learn and grow as a developer.
+                        I&apos;m attracted to front-end libraries like React but I also enjoy working with Node.js.
+                        I&apos;m currently looking for a apprenticeship in a company where I can learn and grow as a developer.
                     </p>
                 </div>
                 <div
