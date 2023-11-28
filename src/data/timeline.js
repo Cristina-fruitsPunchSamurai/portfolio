@@ -1,6 +1,4 @@
 
-
-
 export const timeline = [
     {
         id: "1",
@@ -22,9 +20,10 @@ export const timeline = [
         id: "3",
         title: "Traffic Manager",
         company: "digiSchool",
-        date: "March 2023 - September 2023",
+        date: "October 2016 - February 2023",
         description :'Courses',
         icon: "work"
     },
+
 
 ]

@@ -5,3 +5,8 @@
 html {
     --line-color:#DBEAFE;
 }
+
+.vertical-timeline-element-content{
+    background-color: #F5F3FF;
+    border-radius: 0.5rem;
+}

@@ -1,7 +1,8 @@
 
-import Experience from './components/Experience'
-import Hero from './components/Hero'
-import NavBar from './components/Navigation/NavBar'
+import Experience from './components/Experience';
+import Hero from './components/Hero';
+import NavBar from './components/Navigation/NavBar';
+import About from './components/About';
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <NavBar />
       <div className='mx-auto py-4 px-10'>
         <Hero />
+        <About />
         <Experience/>
       </div>
 

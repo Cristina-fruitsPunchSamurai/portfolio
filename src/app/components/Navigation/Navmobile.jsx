@@ -35,10 +35,10 @@ export default function Navmobile() {
                             initial={{ scale: 0, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             transition={{
-  ease: "linear",
-  duration: 0.3,
-  x: { duration: 1 }
-}}
+                            ease: "linear",
+                            duration: 0.3,
+                            x: { duration: 1 }
+                            }}
                             onClick={() => setOpen((prev) => !prev)}
                             key={link.id}
                             className="w-full p-2">

@@ -15,8 +15,11 @@ module.exports = {
       colors: {
         'primary-link': '#FCE7F3',
         'secondary-link' : '#9D174D',
-        'primary': '#12c2e9',
-        'secondary': '#c471ed',
+        'primary-gradient': '#881337',
+        'secondary-gradient': '#be185d',
+        'third-gradient': '#d946ef',
+        // 'primary': '#12c2e9',
+        // 'secondary': '#c471ed',
       }
     },
   },

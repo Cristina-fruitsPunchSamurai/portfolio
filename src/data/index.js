@@ -6,14 +6,14 @@ export const navLinks = [
         hash: "#about",
     },
     {
-        id: "projects",
-        name: "Projects",
-        hash: "#projects",
-    },
-        {
         id: "experience",
         name: "Experience",
         hash: "#experience",
+    },
+    {
+        id: "projects",
+        name: "Projects",
+        hash: "#projects",
     },
     {
         id: "contact",
