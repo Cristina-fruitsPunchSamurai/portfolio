@@ -10,7 +10,7 @@ export default function Hero() {
                 <div className="md:col-start-1 md:col-end-4">
                     <h2
                     className="text-4xl lg:text-6xl font-bold">
-                    <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"> Welcome I'm {" "}</span>
+                    <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"> Welcome I&apos;m {" "}</span>
                     <br/>
                     <TypeAnimation
                     sequence={[
