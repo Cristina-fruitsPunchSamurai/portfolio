@@ -11,12 +11,14 @@ import '../globals.css';
 export default function Experience() {
     let workStyles = { background: '#4C1D95', padding: '0.5rem'};
     let schoolStyles = {background: '#831843', padding: '0.5rem'};
+
     return (
         <section id="experience" className='mt-20'>
         <div className='mx-auto'>
             <h3 className='text-3xl font-bold flex mx-auto items-center justify-center'>Experience</h3>
             <VerticalTimeline
-            lineColor=''>
+            lineColor=''
+            animate={true}>
                 {timeline.map((item) => {
                     let isWorkIcon = item.icon === 'work';
                     return (
@@ -29,9 +31,9 @@ export default function Experience() {
                             icon={isWorkIcon ? <MdOutlineWork/> : <FaGraduationCap/>}
                             iconStyle={isWorkIcon ? workStyles : schoolStyles}
                             >
-                            <h3 className="vertical-timeline-element-title text-zinc-900 font-bold">{item.title}</h3>
-                            <h4 className='text-zinc-700 text-sm'>{item.company}</h4>
-                            <p className='text-zinc-900 text-sm'>{item.description}</p>
+                            <h3 className="vertical-timeline-element-title">{item.title}</h3>
+                            <h4 className='vertical-timeline-element-subtitle'>{item.company}</h4>
+                            <p className='vertical-timeline-element-description'>{item.description}</p>
                             </VerticalTimelineElement>
                         </React.Fragment>
                 )})}

@@ -3,6 +3,7 @@ import Experience from './components/Experience';
 import Hero from './components/Hero';
 import NavBar from './components/Navigation/NavBar';
 import About from './components/About';
+import Skills from './components/Skills';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <div className='mx-auto py-4 px-10'>
         <Hero />
         <About />
+        <Skills />
         <Experience/>
       </div>
 

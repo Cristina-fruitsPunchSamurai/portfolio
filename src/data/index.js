@@ -6,6 +6,11 @@ export const navLinks = [
         hash: "#about",
     },
     {
+        id: "skills",
+        name: "Skills",
+        hash: "#skills",
+    },
+    {
         id: "experience",
         name: "Experience",
         hash: "#experience",
