@@ -13,9 +13,9 @@ export default function Experience() {
     let schoolStyles = {background: '#831843', padding: '0.5rem'};
 
     return (
-        <section id="experience" className='mt-20'>
-        <div className='mx-auto'>
-            <h3 className='text-3xl font-bold flex mx-auto items-center justify-center'>Experience</h3>
+        <section className='mt-20'>
+        <div className='mx-auto w-[90%]'>
+            <h3 id="experience" className='text-3xl font-bold flex mx-auto items-center justify-center'>Experience</h3>
             <VerticalTimeline
             lineColor=''
             animate={true}>
@@ -33,7 +33,7 @@ export default function Experience() {
                             >
                             <h3 className="vertical-timeline-element-title">{item.title}</h3>
                             <h4 className='vertical-timeline-element-subtitle'>{item.company}</h4>
-                            <p className='vertical-timeline-element-description'>{item.description}</p>
+                            <p id="description">{item.description}</p>
                             </VerticalTimelineElement>
                         </React.Fragment>
                 )})}
