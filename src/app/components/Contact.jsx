@@ -4,7 +4,7 @@ import { IoIosSend } from "react-icons/io";
 export default function Contact() {
     return (
         <section id="contact" className='mb-20 md:px-10 px-6 text-center mx-auto w-full'>
-            <h3 className='text-2xl font-bold flex items-center justify-center mb-5'>Let's keep in touch</h3>
+            <h3 className='text-2xl font-bold flex items-center justify-center mb-5'>Let&apos;s keep in touch</h3>
             <p className='text-base flex items-center justify-center mb-5 md:w-2/3 mx-auto w-full text-justify'>I&apos;m currently looking for new oportunities.
             If you want to contact me, you can send me a message through this form. I&apos;ll also be glad to have some feedback or advice.</p>
         <form>
