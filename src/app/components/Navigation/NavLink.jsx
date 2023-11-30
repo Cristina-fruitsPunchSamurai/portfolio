@@ -2,14 +2,20 @@
 
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
+import clsx from 'clsx';
 
-export default function NavLink({href,title}) {
-    const pathname = usePathname();
-    const isActive = pathname === href;
-    const className = isActive ? "secondary-link" : "primary-link"
+export default function NavLink({href,title, isActive, onClick}) {
+
     return (
-        <Link href={href}
-        className={`link w-full hover:font-bold transition cursor-pointer text-${className}`}>
+        <Link
+        href={href}
+        scrollSmooth={true}
+        className={clsx(
+            'link w-full hover:font-bold transition cursor-pointer',
+            isActive === `${title}` ? 'text-secondary-link bg-zinc-800 bg-opacity-60 rounded-2xl font-extrabold py-2 px-4' : 'font-normal'
+            )}
+        onClick={onClick}
+        >
             {title}
         </Link>
     )

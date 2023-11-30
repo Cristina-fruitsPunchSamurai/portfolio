@@ -8,10 +8,15 @@ import { useState } from "react";
 import Navmobile from "./Navmobile";
 
 export default function NavBar() {
+    const [isActive, setIsActive] = useState("Home");
+
+    const handleChangeActiveLink = (name) => {
+        setIsActive(name);
+    }
 
     return (
         <header className="z-[999] relative">
-        <nav className="mx-auto w-full fixed top-0 bg-[#121212] opacity-100">
+        <nav className="mx-auto w-full fixed top-0 bg-[#121212] opacity-90">
             <div className="navbar flex container justify-between items-center md:py-4 mx-auto px-2 py-2">
                 <div className="flex justify-center items-center">
                     <Link href="/">
@@ -24,7 +29,11 @@ export default function NavBar() {
                     <ul className="flex gap-10 list-none menu menu-horizontal">
                         {navLinks.map((link) => (
                             <li key={link.id}>
-                                <NavLink href={link.hash} title={link.name}/>
+                                <NavLink
+                                href={link.hash}
+                                title={link.name}
+                                isActive={isActive}
+                                onClick={()=> handleChangeActiveLink(link.name)}/>
                             </li>
                         ))}
                     </ul>

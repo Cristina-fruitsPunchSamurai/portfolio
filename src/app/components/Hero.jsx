@@ -11,7 +11,7 @@ export default function Hero() {
         <motion.section
         initial={{ opacity: 0, y:100 }}
         animate={{ opacity: 1, y:0 }}
-        className="md:py-16 md:px-20 px-10 mt-28">
+        className="md:py-16 md:px-20 px-10 mt-28 md:mt-16">
             <div className="grid grid-cols-1 md:grid-cols-6 auto-cols-fr md:mt-10">
                 <div className="md:col-start-1 md:col-end-4">
                     <div className="h-40 mt-5">

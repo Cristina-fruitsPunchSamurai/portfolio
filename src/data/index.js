@@ -1,6 +1,11 @@
 
 export const navLinks = [
     {
+        id: "home",
+        name: "Home",
+        hash: "#home",
+    },
+    {
         id: "about",
         name: "About",
         hash: "#about",

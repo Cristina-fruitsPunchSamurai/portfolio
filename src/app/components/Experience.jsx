@@ -14,7 +14,7 @@ export default function Experience() {
     let schoolStyles = {background: '#831843', padding: '0.5rem'};
 
     return (
-        <section className='mt-20'>
+        <section className='mb-28'>
         <div className='mx-auto w-[90%]'>
             <h3 id="experience" className='text-3xl font-bold flex mx-auto items-center justify-center'>Experience</h3>
             <VerticalTimeline
@@ -40,7 +40,6 @@ export default function Experience() {
                 )})}
             </VerticalTimeline>
         </div>
-        <Divider/>
         </section>
 
     )

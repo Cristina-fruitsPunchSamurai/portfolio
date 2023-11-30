@@ -18,10 +18,8 @@ export default function Home() {
         <Skills />
         <ProjectsList />
         <Experience/>
-        {/* <Contact /> */}
+        <Contact />
       </div>
-
-
     </main>
   )
 }
