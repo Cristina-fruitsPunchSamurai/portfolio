@@ -1,1 +1,0 @@
-// 'AnimalConnect helps making the animal adoption process easier. Through this web application, the future adopter can filter, choose and send an adoption application. Shelters and particular givers accept or refuse the applications',

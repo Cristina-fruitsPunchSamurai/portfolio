@@ -11,14 +11,14 @@ export const navLinks = [
         hash: "#skills",
     },
     {
-        id: "experience",
-        name: "Experience",
-        hash: "#experience",
-    },
-    {
         id: "projects",
         name: "Projects",
         hash: "#projects",
+    },
+    {
+        id: "experience",
+        name: "Experience",
+        hash: "#experience",
     },
     {
         id: "contact",

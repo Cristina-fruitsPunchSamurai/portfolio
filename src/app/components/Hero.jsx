@@ -2,10 +2,16 @@
 import { TypeAnimation } from "react-type-animation";
 import cris from "/public/photo-red.jpg";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import Link from "next/link";
+//import cv from "/CV-CristinaM.pdf";
 
 export default function Hero() {
     return (
-        <section className="py-16 px-5">
+        <motion.section
+        initial={{ opacity: 0, y:100 }}
+        animate={{ opacity: 1, y:0 }}
+        className="md:py-16 md:px-20 px-10 mt-28">
             <div className="grid grid-cols-1 md:grid-cols-6 auto-cols-fr md:mt-10">
                 <div className="md:col-start-1 md:col-end-4">
                     <div className="h-40 mt-5">
@@ -45,7 +51,28 @@ export default function Hero() {
                     <Image src={cris} alt='' width={300} height={300} className="hidden md:block rounded-full"/>
                 </div>
             </div>
-            <button className="flex rounded-full px-5 py-2 bg-gradient-to-r from-primary-gradient via-secondary-gradient to-third-gradient"> Download CV </button>
-        </section>
+            <div className="flex flex-col md:flex-row gap-10">
+                <a href="/CV-CristinaM.pdf" download>
+                    <motion.button
+                    className="flex justify-center rounded-full px-5 py-2 bg-gradient-to-r from-primary-gradient via-secondary-gradient to-third-gradient min-w-full"
+                    whileHover={{
+                        scale: 1.1,
+                        transition: { type: "spring", stiffness: 300 },
+                        }}>
+                        Download CV
+                    </motion.button>
+                </a>
+                <Link href={"#contact"}>
+                    <motion.button
+                    className="flex justify-center rounded-full px-5 py-2 bg-gradient-to-r from-primary-gradient via-secondary-gradient to-third-gradient min-w-full"
+                    whileHover={{
+                        scale: 1.1,
+                        transition: { type: "spring", stiffness: 300 },
+                        }}>
+                    Contact me
+                    </motion.button>
+                </Link>
+            </div>
+        </motion.section>
     )
 }

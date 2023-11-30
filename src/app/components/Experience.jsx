@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { FaGraduationCap } from "react-icons/fa6";
 import { MdOutlineWork } from "react-icons/md";
 import '../globals.css';
+import Divider from './Divider';
 
 export default function Experience() {
     let workStyles = { background: '#4C1D95', padding: '0.5rem'};
@@ -39,6 +40,7 @@ export default function Experience() {
                 )})}
             </VerticalTimeline>
         </div>
+        <Divider/>
         </section>
 
     )
