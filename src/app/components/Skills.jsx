@@ -8,13 +8,13 @@ import { ActiveSectionContext } from '@/context/section-context';
 import { useInView } from "react-intersection-observer";
 import {skills} from '@/data/skills';
 import { motion } from "framer-motion";
-import { scrollActiveSection } from '@/utils/activeScrollContext';
+import { useScrollActiveSection } from '@/utils/activeScrollContext';
 
 export default function Skills() {
 
     const {setIsActive} = useContext(ActiveSectionContext);
 
-    const {ref} = scrollActiveSection("Skills",0.75, setIsActive)
+    const {ref} = useScrollActiveSection("Skills",0.75, setIsActive)
 
     return (
         <>

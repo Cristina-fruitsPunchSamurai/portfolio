@@ -8,13 +8,13 @@ import woman from '/public/woman-code.png';
 //import { useInView } from 'react-intersection-observer';
 import { useContext } from 'react';
 import { ActiveSectionContext } from '@/context/section-context';
-import { scrollActiveSection } from '@/utils/activeScrollContext';
+import { useScrollActiveSection } from '@/utils/activeScrollContext';
 
 export default function About() {
 
     const {setIsActive} = useContext(ActiveSectionContext);
 
-    const {ref} = scrollActiveSection("About", 0.75 , setIsActive)
+    const {ref} = useScrollActiveSection("About", 0.75 , setIsActive)
 
     return (
         <>

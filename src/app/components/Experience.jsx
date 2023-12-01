@@ -14,7 +14,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import { FaGraduationCap } from "react-icons/fa6";
 import { MdOutlineWork } from "react-icons/md";
 import '../globals.css';
-import { scrollActiveSection } from '@/utils/activeScrollContext';
+import { useScrollActiveSection } from '@/utils/activeScrollContext';
 
 
 export default function Experience() {
@@ -23,7 +23,7 @@ export default function Experience() {
 
     const {setIsActive} = useContext(ActiveSectionContext);
 
-    const {ref} = scrollActiveSection("Experience", 0.60, setIsActive)
+    const {ref} = useScrollActiveSection("Experience", 0.60, setIsActive)
 
     return (
         <section

@@ -8,14 +8,14 @@ import { useContext, useEffect } from "react";
 import { ActiveSectionContext } from '@/context/section-context';
 //Scroll Nav with react-intersection-observer
 import { useInView } from 'react-intersection-observer';
-import { scrollActiveSection } from '@/utils/activeScrollContext';
+import { useScrollActiveSection } from '@/utils/activeScrollContext';
 
 
 export default function ProjectsList() {
 
     const {setIsActive} = useContext(ActiveSectionContext);
 
-    const {ref} =  scrollActiveSection("Projects", 0.40, setIsActive)
+    const {ref} =  useScrollActiveSection("Projects", 0.40, setIsActive)
 
     return (
         <section

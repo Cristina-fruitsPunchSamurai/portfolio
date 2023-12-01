@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 //import { ActiveSectionContext } from "../context/section-context";
 
-export const scrollActiveSection = (sectionName,threshold, setIsActive ) => {
+export const useScrollActiveSection = (sectionName,threshold, setIsActive ) => {
 
         const {ref,inView} = useInView({
         threshold: threshold,
