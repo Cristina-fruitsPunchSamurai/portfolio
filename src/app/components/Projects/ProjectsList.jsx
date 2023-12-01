@@ -1,12 +1,40 @@
 
-import Divider from "../Divider";
+'use client'
+
 import ProjectsCard from "./ProjectsCard";
 import { projects } from "@/data/projects";
+import { useContext, useEffect } from "react";
+//my context
+import { ActiveSectionContext } from '@/context/section-context';
+//Scroll Nav with react-intersection-observer
+import { useInView } from 'react-intersection-observer';
+import { scrollActiveSection } from '@/utils/activeScrollContext';
+
 
 export default function ProjectsList() {
+        //const{setIsActive} = useContext(ActiveSectionContext);
+        const {ref,inView} = useInView({
+        threshold: 0.40,
+        });
+
+        scrollActiveSection("Projects", ref, inView)
+
+        // useEffect(() => {
+        //     if (inView) {
+        //         setIsActive("Projects");
+        //     }
+        // }, [inView, setIsActive])
+
     return (
-        <section id="projects" className="flex flex-col items-center justify-center">
-            <h3 className="text-3xl font-bold flex mx-auto items-center justify-center mb-5">Projects</h3>
+        <section
+        ref={ref}
+        id="projects"
+        className="flex flex-col items-center justify-center mb-28 scroll-mt-28 md:w-[80%] mx-auto">
+            <h3 className="text-2xl font-bold flex items-center justify-center mb-8 uppercase">Projects</h3>
+                <p className='text-base flex items-center justify-center text-justify w-[90%] mx-auto leading-relaxed mb-8 px-5'>
+                In this section you can take a look at some of the projects I created, I would like to show you my progress throughout my trainning to become a web developer.
+                Therefore, for each new project, in order to improve I try to add some challenges, or for example a new framework, a new discovery or a new technique. Don't hesitate to visit my Github page 😉.
+                </p>
                 <div className="grid md:grid-cols-3 gap-8 md:gap-12">
                 {projects.map((project) => (
                     <ProjectsCard
@@ -19,7 +47,6 @@ export default function ProjectsList() {
                 )
                 )}
                 </div>
-            <Divider/>
         </section>
     )
 }

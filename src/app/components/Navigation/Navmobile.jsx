@@ -37,7 +37,7 @@ export default function Navmobile() {
                             transition={{
                             type: "spring",
                             stiffness: 500,
-                            damping: 100
+                            damping: 100,
                             }}
                             onClick={() => setOpen((prev) => !prev)}
                             key={link.id}

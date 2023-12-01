@@ -1,22 +1,39 @@
+
 'use client'
+
+import { useContext, useEffect} from 'react';
+//my context
+import { ActiveSectionContext } from '@/context/section-context';
+//Scroll Nav with react-intersection-observer
+import {useInView} from 'react-intersection-observer';
 import { TypeAnimation } from "react-type-animation";
 import cris from "/public/photo-red.jpg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-//import cv from "/CV-CristinaM.pdf";
+
 
 export default function Hero() {
+    const{setIsActive} = useContext(ActiveSectionContext);
+        const {ref,inView} = useInView({
+        threshold: 0.5,
+    });
+        useEffect(() => {
+            if (inView) {
+                setIsActive("Welcome");
+            }
+        }, [inView, setIsActive])
+
     return (
         <motion.section
+        ref={ref}
         initial={{ opacity: 0, y:100 }}
         animate={{ opacity: 1, y:0 }}
-        className="md:py-16 md:px-20 px-10 mt-28 md:mt-16">
+        className="md:py-16 md:px-20 px-10 mt-28 md:mt-16 scroll-mt-[100rem] mb-28">
             <div className="grid grid-cols-1 md:grid-cols-6 auto-cols-fr md:mt-10">
                 <div className="md:col-start-1 md:col-end-4">
                     <div className="h-40 mt-5">
-                    <h2
-                    className="text-4xl lg:text-6xl font-bold">
+                    <h2 className="text-4xl lg:text-6xl font-bold">
                     <span className="bg-gradient-to-r  from-primary-gradient via-secondary-gradient to-third-gradient bg-clip-text text-transparent">
                         Welcome I&apos;m {" "}
                     </span>
@@ -46,9 +63,13 @@ export default function Hero() {
                         I&apos;m currently looking for a apprenticeship in a company where I can learn and grow as a developer.
                     </p>
                 </div>
-                <div
-                className="md:col-start-5 md:col-end-6 md:place-self-center md:self-center">
-                    <Image src={cris} alt='' width={300} height={300} className="hidden md:block rounded-full"/>
+                <div className="md:col-start-5 md:col-end-6 md:place-self-center md:self-center">
+                    <Image
+                    src={cris}
+                    alt='Cristina profile picture'
+                    width={300}
+                    height={300}
+                    className="hidden md:block rounded-full"/>
                 </div>
             </div>
             <div className="flex flex-col md:flex-row gap-10">
