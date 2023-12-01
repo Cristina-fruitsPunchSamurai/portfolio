@@ -1,9 +1,10 @@
 
 'use client'
 
-import { useContext, useEffect} from 'react';
+import { useContext} from 'react';
 //my context
 import { ActiveSectionContext } from '@/context/section-context';
+import { scrollActiveSection } from '@/utils/activeScrollContext';
 //Scroll Nav with react-intersection-observer
 import {useInView} from 'react-intersection-observer';
 import { TypeAnimation } from "react-type-animation";
@@ -15,14 +16,16 @@ import Link from "next/link";
 
 export default function Hero() {
     const{setIsActive} = useContext(ActiveSectionContext);
-        const {ref,inView} = useInView({
-        threshold: 0.5,
-    });
-        useEffect(() => {
-            if (inView) {
-                setIsActive("Welcome");
-            }
-        }, [inView, setIsActive])
+
+    const {ref} = scrollActiveSection("Welcome", 0.50, setIsActive)
+    //     const {ref,inView} = useInView({
+    //     threshold: 0.5,
+    // });
+    //     useEffect(() => {
+    //         if (inView) {
+    //             setIsActive("Welcome");
+    //         }
+    //     }, [inView, setIsActive])
 
     return (
         <motion.section

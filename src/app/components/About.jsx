@@ -1,34 +1,20 @@
 
 'use client'
 
-import { useContext, useEffect} from 'react';
-//my context
-import { ActiveSectionContext } from '@/context/section-context';
 import Image from 'next/image';
 import {motion} from 'framer-motion';
 import woman from '/public/woman-code.png';
 //Scroll Nav with react-intersection-observer
-import { useInView } from 'react-intersection-observer';
+//import { useInView } from 'react-intersection-observer';
+import { useContext } from 'react';
+import { ActiveSectionContext } from '@/context/section-context';
 import { scrollActiveSection } from '@/utils/activeScrollContext';
 
 export default function About() {
 
-    const {ref,inView} = useInView({
-        threshold: 0.75,
-    });
+    const {setIsActive} = useContext(ActiveSectionContext);
 
-    scrollActiveSection("About", ref, inView)
-
-    // const{setIsActive} = useContext(ActiveSectionContext);
-    // const {ref,inView} = useInView({
-    //     threshold: 0.75,
-    // });
-
-    // useEffect(() => {
-    //     if (inView) {
-    //         setIsActive("About");
-    //     }
-    // }, [inView, setIsActive])
+    const {ref} = scrollActiveSection("About", 0.75 , setIsActive)
 
     return (
         <>
@@ -51,7 +37,7 @@ export default function About() {
                     </motion.div>
                     <p className='text-base md:text-base text-justify px-8 md:w-[50%] w-full'>
                         After 7 years working on digital marketing for innovative companies, I decided to change my career path and become a web developer. 💪🏼
-                        And you may ask, <span className='font-bold'> "But why ?"...</span> well because I want to always have something to learn, plus I really like solving problems and bring projects to life.
+                        And you may ask, <span className='font-bold'> &quot;But why ?&quot;...</span> well because I want to always have something to learn, plus I really like solving problems and bring projects to life.
                         Currently, my tech stack is based on JavaScript but I am open to learning new programming languages.
                         Also, I&apos;m a big fan of React and I&apos;m currently learning Next.js and TypeScript. 🤓 <br/><br/>
                         Something random about me, I&apos;m fluent in French, Spanish, English and I&apos;m a Japanese intermediate. I&apos;m fascinated by Japanese Edo period, mangas, animes and Japanese culture.

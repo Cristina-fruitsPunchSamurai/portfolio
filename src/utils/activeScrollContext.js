@@ -1,16 +1,21 @@
 
-import { useContext } from "react";
+//import { useContext } from "react";
+import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-import{useInView} from "react-intersection-observer";
-import { ActiveSectionContext } from "../context/section-context";
+//import { ActiveSectionContext } from "../context/section-context";
 
-export const scrollActiveSection = (section, ref, inView) => {
+export const scrollActiveSection = (sectionName,threshold, setIsActive ) => {
 
-    const{setIsActive} = useContext(ActiveSectionContext);
+        const {ref,inView} = useInView({
+        threshold: threshold,
+    });
 
     useEffect(() => {
         if (inView) {
-            setIsActive(section);
+            setIsActive(sectionName);
         }
-    }, [inView, setIsActive])
+    }, [inView, setIsActive, sectionName, ref]);
+
+    return {ref};
 }
+

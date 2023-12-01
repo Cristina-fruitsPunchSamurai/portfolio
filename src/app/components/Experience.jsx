@@ -21,18 +21,9 @@ export default function Experience() {
     let workStyles = { background: '#4C1D95', padding: '0.5rem'};
     let schoolStyles = {background: '#831843', padding: '0.5rem'};
 
-    //const{setIsActive} = useContext(ActiveSectionContext);
-    const {ref,inView} = useInView({
-        threshold: 0.60,
-    });
+    const {setIsActive} = useContext(ActiveSectionContext);
 
-    scrollActiveSection("Experience", ref, inView)
-
-    // useEffect(() => {
-    //         if (inView) {
-    //             setIsActive("Experience");
-    //         }
-    //     }, [inView, setIsActive])
+    const {ref} = scrollActiveSection("Experience", 0.60, setIsActive)
 
     return (
         <section

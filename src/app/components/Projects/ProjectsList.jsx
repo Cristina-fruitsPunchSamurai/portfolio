@@ -12,18 +12,10 @@ import { scrollActiveSection } from '@/utils/activeScrollContext';
 
 
 export default function ProjectsList() {
-        //const{setIsActive} = useContext(ActiveSectionContext);
-        const {ref,inView} = useInView({
-        threshold: 0.40,
-        });
 
-        scrollActiveSection("Projects", ref, inView)
+    const {setIsActive} = useContext(ActiveSectionContext);
 
-        // useEffect(() => {
-        //     if (inView) {
-        //         setIsActive("Projects");
-        //     }
-        // }, [inView, setIsActive])
+    const {ref} =  scrollActiveSection("Projects", 0.40, setIsActive)
 
     return (
         <section
@@ -33,7 +25,7 @@ export default function ProjectsList() {
             <h3 className="text-2xl font-bold flex items-center justify-center mb-8 uppercase">Projects</h3>
                 <p className='text-base flex items-center justify-center text-justify w-[90%] mx-auto leading-relaxed mb-8 px-5'>
                 In this section you can take a look at some of the projects I created, I would like to show you my progress throughout my trainning to become a web developer.
-                Therefore, for each new project, in order to improve I try to add some challenges, or for example a new framework, a new discovery or a new technique. Don't hesitate to visit my Github page 😉.
+                Therefore, for each new project, in order to improve I try to add some challenges, or for example a new framework, a new discovery or a new technique. Don&apos;t hesitate to visit my Github page 😉.
                 </p>
                 <div className="grid md:grid-cols-3 gap-8 md:gap-12">
                 {projects.map((project) => (
