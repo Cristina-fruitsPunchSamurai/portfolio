@@ -51,9 +51,9 @@ export default function Hero() {
                     />
                     </h2>
                     </div>
-                    <p className="text-[#ADB7BE] text-sm mb-6 lg:text-md w-full text-justify md:mt-8">
+                    <p className="text-[#ADB7BE] text-base mb-6 lg:text-md w-full text-justify md:mt-8">
                         Hello I&apos;m Cristina, a fulllstack JavaScript developer.
-                        My goal is to continue learning more frameworks and langugages to become a better developer.
+                        My goal is to continue learning more frameworks and langugages and become a better developer.
                         I&apos;m attracted to front-end libraries like React but I also enjoy working with Node.js.
                         I&apos;m currently looking for a apprenticeship in a company where I can learn and grow as a developer.
                     </p>
@@ -73,6 +73,7 @@ export default function Hero() {
                     className="flex justify-center rounded-full px-5 py-2 bg-gradient-to-r from-primary-gradient via-secondary-gradient to-third-gradient min-w-full"
                     whileHover={{
                         scale: 1.1,
+                        boxShadow : "0px 0px 8px rgb(255, 255, 255)",
                         transition: { type: "spring", stiffness: 300 },
                         }}>
                         Download CV
@@ -83,6 +84,7 @@ export default function Hero() {
                     className="flex justify-center rounded-full px-5 py-2 bg-gradient-to-r from-primary-gradient via-secondary-gradient to-third-gradient min-w-full"
                     whileHover={{
                         scale: 1.1,
+                        boxShadow : "0px 0px 8px rgb(255, 255, 255)",
                         transition: { type: "spring", stiffness: 300 },
                         }}>
                     Contact me
