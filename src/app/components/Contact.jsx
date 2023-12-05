@@ -32,6 +32,7 @@ export default function Contact() {
                     maxLength={256}
                     id="email"
                     type="email"
+                    required
                     placeholder="your email"
                     name="sender"/>
                 </div>

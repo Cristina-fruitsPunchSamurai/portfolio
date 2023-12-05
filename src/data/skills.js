@@ -8,6 +8,7 @@ import { FaHtml5 } from "react-icons/fa";
 import { IoLogoCss3 } from "react-icons/io5";
 import { BiLogoTailwindCss } from "react-icons/bi";
 import { BiLogoPostgresql } from "react-icons/bi";
+import { SiSequelize } from "react-icons/si";
 
 
 export const skills = [
@@ -60,6 +61,11 @@ export const skills = [
         id: "10",
         name: "postgresql",
         icon: <BiLogoPostgresql size={70}/>
+    },
+        {
+        id: "11",
+        name: "sequelize",
+        icon: <SiSequelize size={70}/>
     },
 
 ]

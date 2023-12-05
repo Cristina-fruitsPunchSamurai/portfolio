@@ -23,11 +23,11 @@ export default function Skills() {
         id="skills"
         className='mb-28 scroll-mt-28 md:w-[80%] mx-auto' >
             <h3 className='text-2xl font-bold flex items-center justify-center mb-8 uppercase'>Skills</h3>
-            <p className='text-base flex items-center justify-center text-justify w-[90%] mx-auto leading-relaxed mb-8 px-5'>
+            <p className='text-base flex items-center w-[90%] mx-auto leading-relaxed mb-8 px-5'>
             Currently my traning is based on JavaScript but I enjoy learning. That is why I&apos;m always open to learn new technologies, I want to improve and become a better developer.
             I have an interest in front-end technologies like React, but thanks to my training this year I discovered the back-end through Node.js and I was really amazed by how much we can make web applications complete and dynamic thanks to, for example, APIs, database manipulation or even security optimization.
             </p>
-            <div className='grid grid-cols-3 md:flex md:gap-8 gap-4 items-center justify-center w-[80%] mx-auto'>
+            <div className='grid grid-cols-3 md:flex md:flex-wrap md:gap-8 gap-4 items-center justify-center w-[80%] mx-auto'>
                 {skills.map((skill) => (
                     <motion.div
                     key={skill.id}

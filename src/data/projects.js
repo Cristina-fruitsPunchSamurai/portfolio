@@ -23,14 +23,14 @@ export const projects = [
         image : animalconnect,
         technologies: ["NodeJS", "React", "Redux", "Tailwind", "PostgreSQL", "Axios"],
         version: "MVP",
-        link : 'https://github.com/Cristina-fruitsPunchSamurai/hoy-que-hiciste'
+        link : 'https://github.com/Cristina-fruitsPunchSamurai/animalConnect-front'
     },
     {
         id: "3",
         title: "Mangatek",
         description: "My first fullstack project and my dream project. A mangashelf where we can keep record of all the books read or currently reading. We can filter by genre, we can signup and login. I will update this project with new features and better technologies.",
         image : mangatek,
-        technologies: ["EJS","NodeJS", "JavaScript","Bulma", "PostgreSQL", "MVC"],
+        technologies: ["EJS","NodeJS", "Sequelize","Bulma", "PostgreSQL", "MVC"],
         version: "MVP",
         link : 'https://github.com/Cristina-fruitsPunchSamurai/mangatheque'
     },
@@ -39,7 +39,7 @@ export const projects = [
         title: "Github repo finder",
         description: "Using the GitHub API, this app allows you to search for a repo depending on a search term. This is one of my frist React challenges.",
         image : githubrepo,
-        technologies: ["React", "Axios", "MUI"],
+        technologies: ["React", "Axios", "MUI", "React Router"],
         version: "MVP",
         link : 'https://github.com/Cristina-fruitsPunchSamurai/Github-repo-finder'
     },

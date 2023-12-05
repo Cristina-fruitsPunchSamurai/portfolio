@@ -21,6 +21,7 @@ export default function Hero() {
 
     return (
         <motion.section
+        id="welcome"
         ref={ref}
         initial={{ opacity: 0, y:100 }}
         animate={{ opacity: 1, y:0 }}
@@ -51,8 +52,8 @@ export default function Hero() {
                     />
                     </h2>
                     </div>
-                    <p className="text-[#ADB7BE] text-base mb-6 lg:text-md w-full text-justify md:mt-8">
-                        Hello I&apos;m Cristina, a fulllstack JavaScript developer.
+                    <p className="text-[#ADB7BE] text-base mb-6 lg:text-md w-full md:mt-8 leading-relaxed">
+                        Hello 👋🏼 I&apos;m Cristina, a fulllstack JavaScript developer.
                         My goal is to continue learning more frameworks and langugages and become a better developer.
                         I&apos;m attracted to front-end libraries like React but I also enjoy working with Node.js.
                         I&apos;m currently looking for a apprenticeship in a company where I can learn and grow as a developer.

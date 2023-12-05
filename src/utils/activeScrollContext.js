@@ -16,6 +16,6 @@ export const useScrollActiveSection = (sectionName,threshold, setIsActive ) => {
         }
     }, [inView, setIsActive, sectionName, ref]);
 
-    return {ref};
+    return {ref, inView};
 }
 

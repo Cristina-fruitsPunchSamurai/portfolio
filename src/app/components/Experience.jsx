@@ -1,7 +1,7 @@
 
 'use client'
 
-import React,{useContext, useEffect}from 'react';
+import React,{useContext,}from 'react';
 //my context
 import { ActiveSectionContext } from '@/context/section-context';
 //Scroll Nav with react-intersection-observer
@@ -22,8 +22,7 @@ export default function Experience() {
     let schoolStyles = {background: '#831843', padding: '0.5rem'};
 
     const {setIsActive} = useContext(ActiveSectionContext);
-
-    const {ref} = useScrollActiveSection("Experience", 0.60, setIsActive)
+    const {ref, inView} = useScrollActiveSection("Experience", 0.50, setIsActive);
 
     return (
         <section
@@ -33,7 +32,7 @@ export default function Experience() {
                 <h3 id="experience" className='text-2xl font-bold flex items-center justify-center mb-8 uppercase'>Experience</h3>
                 <VerticalTimeline
                 lineColor=''
-                animate={true}>
+                animate={inView}>
                     {timeline.map((item) => {
                         let isWorkIcon = item.icon === 'work';
                         return (
