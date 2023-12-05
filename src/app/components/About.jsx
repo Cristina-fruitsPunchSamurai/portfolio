@@ -35,7 +35,7 @@ export default function About() {
                     className='hidden md:block'>
                         <Image src={woman} width={320} alt="woman with a computer" />
                     </motion.div>
-                    <p className='text-base md:text-base px-8 md:w-[50%] w-full leading-none'>
+                    <p className='text-base md:text-base px-8 md:w-[50%] w-full leading-relaxed'>
                         After 7 years working on digital marketing for innovative companies, I decided to change my career path and become a web developer.<br/><br/>
                         And you may ask : &quot;But why ?&quot;...well, being a developer means that there is always something new to learn, plus I really like solving problems and bring projects to life.
                         I love the feeling of finally finding a solution to fix a bug after many attempts and tries!
