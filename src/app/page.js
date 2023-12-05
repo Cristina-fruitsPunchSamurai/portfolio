@@ -6,6 +6,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import ProjectsList from './components/Projects/ProjectsList';
 import Contact from './components/Contact';
+import Button from './components/SubmitButton';
 
 
 export default function Home() {

@@ -1,17 +1,18 @@
 'use server'
+
 import { Resend } from "resend";
 import { validateInput } from "@/validation/validateInput";
-import ContactEmail from "@/email/ContactEmail";
+import ContactEmail from "@/email/email-contact";
 import { renderAsync } from "@react-email/render"
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendData = async (formData) => {
-    let data;
     const sender = formData.get('sender');
     const subject = formData.get('subject');
     const message = formData.get('message');
 
+//Validation
     if (validateInput(sender, 256))  {
         return { error: 'Please verify the email' };
     }
@@ -23,27 +24,40 @@ export const sendData = async (formData) => {
     if (validateInput(message, 500))  {
         return { error: 'Please verify the message' };
     }
+//Errors
+const errorMessage = (error) => {
+    let message;
+    if (error instanceof Error) {
+        message = error.message
+    } else if (error && typeof error === 'object' && "message" in error) {
+        message = error.error;
+    } else if ( typeof error === 'string') {
+        message = error;
+    } else {
+        message = 'Something went wrong';
+    }
 
-    const html = await renderAsync(
-        React.createElement(ContactEmail, {
-                    message : {message},
-                    sender : {sender}
-        })
+    return message;
+}
+//On utilise renderAsync afin de passer mon React Email component car en le passant directement à l'intérieur de la fonction, ça throw un error en prod
+    const html = await renderAsync(ContactEmail({ message, sender}),
+        {
+            pretty: true,
+        }
     );
-
+        let data;
         try {
                 data = await resend.emails.send({
                 from: 'Nouveau contact <onboarding@resend.dev>',
                 to: 'crissou.mc@gmail.com',
-                subject: 'Hello World',
-                html: '<p>Congrats on sending your <strong>first email</strong>!</p>',
+                subject : subject,
                 reply_to: sender,
-                react: html,
+                html: html,
             })
-            console.log(data);
             }catch (error) {
-
-                console.error(`Error ${error.message}`);
-            }};
+                return { error: errorMessage(error) };
+            }
+        return data;
+        };
 
 

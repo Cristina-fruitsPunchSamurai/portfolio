@@ -1,13 +1,10 @@
 'use client'
 
 import { sendData } from "@/actions/serverAction";
-import { IoIosSend } from "react-icons/io";
-import { useFormStatus } from "react-dom"
-
+import SubmitButton from "./SubmitButton";
+import Toast from "./Toast";
 
 export default function Contact() {
-    //const ref = useRef(null);
-    const { pending } = useFormStatus();
 
     return (
         <section
@@ -16,9 +13,14 @@ export default function Contact() {
             <h3 className='text-2xl font-bold flex items-center justify-center mb-8 uppercase'>Let&apos;s keep in touch !</h3>
             <p className='text-base flex items-center justify-center mb-5 md:w-2/3 mx-auto w-full text-justify'>I&apos;m currently looking for new oportunities.
             If you want to contact me, you can send me a message through this form. I&apos;ll also be glad to have some feedback or advice.</p>
-        <form action={async(formData)=> {
-            await sendData(formData);
-        }}
+            <form action={async(formData)=> {
+                const {data, error} = await sendData(formData);
+                if(error) {
+                    return <Toast message={error} error={true}/>
+                } else {
+                    return <Toast message={'Your email was sent !'} error={false}/>
+                }
+            }}
             >
             <div className='flex flex-col items-center justify-center'>
                 <div className="md:w-1/3 mb-5">
@@ -59,23 +61,8 @@ export default function Contact() {
                 placeholder="content of the message"
                 name="message"/>
                 </div>
-                    <button
-                    type="submit"
-                    className="flex items-center font-extrabold  text-gray-900 justify-center gap-3 bg-yellow-500 disabled:bg-opacity-65 h-[3rem] md:w-[8rem] w-[10rem] px-5 py-3 rounded-full"
-                    disabled={pending}>
-                        {pending ? (
-                            <div
-                            class="inline-block h-8 w-8 animate-[spinner-grow_0.75s_linear_infinite] rounded-full bg-slate-600 align-[-0.125em] text-primary opacity-0 motion-reduce:animate-[spinner-grow_1.5s_linear_infinite]"
-                            role="status">
-                            </div>
-                        ) : (
-                            <>
-                                Submit ! <IoIosSend size={20}/>
-                            </>
-                        )}
-
-                    </button>
             </div>
+            <SubmitButton/>
         </form>
         </section>
 

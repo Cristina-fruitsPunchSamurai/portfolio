@@ -17,15 +17,7 @@ import Link from "next/link";
 export default function Hero() {
     const{setIsActive} = useContext(ActiveSectionContext);
 
-    const {ref} = useScrollActiveSection("Welcome", 0.50, setIsActive)
-    //     const {ref,inView} = useInView({
-    //     threshold: 0.5,
-    // });
-    //     useEffect(() => {
-    //         if (inView) {
-    //             setIsActive("Welcome");
-    //         }
-    //     }, [inView, setIsActive])
+    const {ref} = useScrollActiveSection("Welcome", 0.2, setIsActive)
 
     return (
         <motion.section

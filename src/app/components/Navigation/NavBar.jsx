@@ -22,6 +22,7 @@ export default function NavBar() {
                 <div className="flex justify-center items-center">
                     <Link href="/">
                     <Image
+                    priority={true}
                     src={logo}
                     width={60}
                     height={60}
