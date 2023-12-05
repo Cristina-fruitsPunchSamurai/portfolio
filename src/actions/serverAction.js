@@ -2,6 +2,7 @@
 import { Resend } from "resend";
 import { validateInput } from "@/validation/validateInput";
 import ContactEmail from "@/email/ContactEmail";
+import shortid from 'shortid';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -29,7 +30,7 @@ export const sendData = async (formData) => {
                 subject: 'Hello World',
                 html: '<p>Congrats on sending your <strong>first email</strong>!</p>',
                 reply_to: sender,
-                react: <ContactEmail  message={message} sender={sender}/>
+                react: <ContactEmail key={shortid.generate()} message={message} sender={sender}/>
             })
             console.log(data);
             }catch (error) {
