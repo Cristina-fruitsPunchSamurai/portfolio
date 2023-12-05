@@ -12,7 +12,7 @@ export default function Contact() {
         className='md:px-10 px-6 text-center mx-auto w-full mb-28 scroll-mt-28 md:w-[80%]'>
             <h3 className='text-2xl font-bold flex items-center justify-center mb-8 uppercase text-center'>Let&apos;s keep in touch !</h3>
             <p className='text-base flex items-center justify-center mb-8 px-5 mx-auto w-full text-justify'>I&apos;m currently looking for new opportunities 🤩
-            I&apos;ll be glad to receive some feedback or advice. Don't hesitate to contact me, through this form and I'll make sure to answer you ASAP. </p>
+            I&apos;ll be glad to receive some feedback or advice. Don&apos;t hesitate to contact me, through this form and I&apos;ll make sure to answer you ASAP. </p>
             <form action={async(formData)=> {
                 const {data, error} = await sendData(formData);
                 if(error) {
