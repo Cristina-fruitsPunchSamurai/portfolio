@@ -28,7 +28,7 @@ export default function Navmobile() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 2 }}
+                    transition={{ delay: 0.2 }}
                     className="fixed left-0 shadow-4xl right-0 top-[3.5rem] bg-neutral-950 p-5 pt-0 border-b-2 border-b-primary-gradient">
                     <ul className="grid gap-2 py-6 px-3 bg-opacity-90">
                         {navLinks.map((link) => (
