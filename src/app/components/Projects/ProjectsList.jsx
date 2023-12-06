@@ -24,7 +24,7 @@ export default function ProjectsList() {
             <h3 className="text-2xl font-bold flex items-center justify-center mb-8 uppercase">Projects</h3>
                 <p className='text-base flex items-center justify-center w-[90%] mx-auto leading-relaxed mb-8 px-5'>
                 I would like to show you my progress throughout my training to become a web developer and in this section you can take a look at some of the projects I created.
-                Therefore, for each new project, in order to improve I try to add some challenges, for example a new framework, a new discovery or a new technique. Don&apos;t hesitate to visit my Github page 😉.
+                Therefore, for each new project, in order to improve I try to add some challenges, for example a new framework, a new discovery or a new technique. Don&apos;t hesitate to visit my Github page.
                 </p>
                 <div className="grid md:grid-cols-3 gap-8 md:gap-12">
                 {projects.map((project) => (
