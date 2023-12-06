@@ -2,9 +2,11 @@
 
 import { sendData } from "@/actions/serverAction";
 import SubmitButton from "./SubmitButton";
-import Toast from "./Toast";
+import toast, { Toaster } from 'react-hot-toast';
+import { useRef } from "react";
 
 export default function Contact() {
+    const ref = useRef(null);
 
     return (
         <section
@@ -13,15 +15,37 @@ export default function Contact() {
             <h3 className='text-2xl font-bold flex items-center justify-center mb-8 uppercase text-center'>Let&apos;s keep in touch !</h3>
             <p className='text-base flex items-center justify-center mb-8 px-5 mx-auto w-full text-justify'>I&apos;m currently looking for new opportunities 🤩
             I&apos;ll be glad to receive some feedback or advice. Don&apos;t hesitate to contact me, through this form and I&apos;ll make sure to answer you ASAP. </p>
-            <form action={async(formData)=> {
+            <form
+            ref={ref}
+            action={async(formData)=> {
                 const {data, error} = await sendData(formData);
+                ref.current?.reset();
                 if(error) {
-                    return <Toast message={error} error={true}/>
+                    toast.error(error.message)
+                    return;
                 } else {
-                    return <Toast message={'Your email was sent !'} error={false}/>
+                    toast.success('Thank you for your message !');
+                    return;
                 }
             }}
             >
+            <div>
+                <Toaster
+                toastOptions={{
+                        style: {
+                            width: '600px',
+                            fontSize: '0.9rem',
+                        },
+                        success: {
+                            style: {
+                                background: 'green',
+                                color: 'white',
+                            },
+                            },
+                        }}
+                position="top-center"
+                />
+            </div>
             <div className='flex flex-col items-center justify-center'>
                 <div className="md:w-[50%] mb-5 w-full">
                     <label className="block uppercase tracking-wide text-sm font-bold mb-2 text-left" htmlFor="email">

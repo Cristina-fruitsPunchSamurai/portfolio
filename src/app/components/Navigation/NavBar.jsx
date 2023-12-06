@@ -17,9 +17,9 @@ export default function NavBar() {
     }
 
     return (
-        <header className="z-[999] relative text-gray-200">
-        <nav className="mx-auto w-full fixed top-0">
-            <div className="navbar bg-[#121212] opacity-90 flex container justify-between items-center md:py-4 mx-auto px-2 py-2">
+        <header className="z-[999] relative text-gray-200 w-[100%]">
+        <nav className="mx-auto fixed top-0 w-full">
+            <div className="navbar bg-[#121212] opacity-90 flex justify-between items-center md:py-4 md:pl-4 md:pr-8 px-2 py-2">
                 <div className="flex justify-center items-center">
                     <Link href="/">
                     <Image
