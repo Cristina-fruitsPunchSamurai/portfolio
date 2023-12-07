@@ -69,7 +69,7 @@ export default function Hero() {
                 </div>
             </div>
             <div className="flex flex-col md:flex-row gap-10">
-                <a href="/CV-CristinaM.pdf" download>
+                <a href="/CV-Cristina.pdf" download>
                     <motion.button
                     className="flex justify-center rounded-full px-5 py-2 bg-gradient-to-r from-primary-gradient via-secondary-gradient to-third-gradient min-w-full"
                     whileHover={{
