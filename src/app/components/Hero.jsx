@@ -16,7 +16,7 @@ import Link from "next/link";
 
 export default function Hero() {
 
-    const{setIsActive} = useContext(ActiveSectionContext);
+    const {setIsActive} = useContext(ActiveSectionContext);
     const {ref} = useScrollActiveSection("Welcome", 0.2, setIsActive)
 
     return (

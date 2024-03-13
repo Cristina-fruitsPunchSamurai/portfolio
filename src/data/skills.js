@@ -9,6 +9,9 @@ import { IoLogoCss3 } from "react-icons/io5";
 import { BiLogoTailwindCss } from "react-icons/bi";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { SiSequelize } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
+import { SiMui } from "react-icons/si";
+
 
 
 export const skills = [
@@ -67,5 +70,16 @@ export const skills = [
         name: "sequelize",
         icon: <SiSequelize size={70}/>
     },
+    {
+        id: "12",
+        name: "mongodb",
+        icon: <SiMongodb size={70}/>
+    },
+    {
+        id: "13",
+        name: "mui",
+        icon: <SiMui size={70}/>
+    }
+
 
 ]
